@@ -1,0 +1,215 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* header section */
+.name-initial {
+    width: 50px;
+    height: 50px;
+    background: #D60000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    min-width: 50px;
+}
+
+.blue-bg {
+    background-color: #008FBE;
+    padding: 16px;
+}
+
+/* banner section */
+.banner {
+    background-image: url('../images/freedom-patch.png');
+    background-position: center center;
+    height: 652px;
+    background-size: cover;
+}
+
+.stars {
+    color: #F73734;
+}
+
+.price {
+    color: #000;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.quantity-input {
+    border-radius: 50px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.quantity-btn {
+    border: none;
+}
+
+.quantity {
+    text-align: center;
+    border: none;
+    margin: 0 5px;
+
+}
+
+.cart-button,
+.cart-button:hover {
+    color: #000;
+    padding: 6px 30px;
+    background-color: #FFA500;
+}
+
+/* customers-review section */
+.verified {
+    color: #008FBE
+}
+
+.item {
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* technology section */
+.number {
+    font-size: 5rem;
+}
+
+.light-blue-bg {
+    background-color: #DEF4FA;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+}
+
+.patch-quality {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 1;
+}
+
+.benefit {
+    position: absolute;
+    z-index: 3;
+    right: 0;
+}
+
+.benefit-bg {
+    position: absolute;
+    width: 40vw;
+    max-width: 200px;
+    left: 0;
+    top: 0;
+    transform: translate(10%, 10%);
+}
+
+/* wear tech section */
+.wear-tech-section {
+    background-image: url(../images/fredom-patch-banner.png);
+    background-size: cover;
+    background-position: top center;
+}
+
+.how-it-works {
+    padding: 20px 10px 0 10px;
+    height: 100%;
+}
+
+.light-purple-bg {
+    background-color: #F3EDEB;
+    border-radius: 10px;
+}
+
+/* news section */
+.news-section {
+    background-image: url(../images/doctor-banner.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+/* jeffrey-gudin-section */
+.image-container {
+    position: relative;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.background-box {
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F73734;
+    width: 100%;
+    height: 72%;
+    z-index: 1;
+}
+
+.profile-image {
+    position: relative;
+    z-index: 2;
+}
+
+/* footer section */
+.footer-section {
+    background-color: #000;
+    padding: 38px;
+}
+
+.footer-section a {
+    font-size: small;
+    color: #fff;
+}
+
+/* helpers */
+.red {
+    color: #D60000
+}
+
+.dark-gray {
+    color: #3D3D3D
+}
+
+.sub {
+    font-size: 18px;
+}
+
+/* media queries */
+@media (max-width: 961px) {
+    .patch-quality {
+        left: unset;
+        transform: translate(-10%, 10%);
+    }
+
+    .freedom-superpatch-sm {
+        transform: translate(10%, -12%);
+        position: relative; 
+        z-index: 2;
+    }
+
+    .light-blue-bg {
+        border-radius: 0;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 50%; 
+        background-color: #DEF4FA;
+        z-index: 1; 
+    }
+
+    .couple-img {
+        position: relative; 
+        z-index: 2;
+    }
+
+    .benefit {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: translate(-38%, -16%);
+    }
+}
