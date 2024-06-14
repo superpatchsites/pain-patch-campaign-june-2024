@@ -105,7 +105,7 @@ body {
 
 /* wear tech section */
 .wear-tech-section {
-    background-image: url(../images/fredom-patch-banner.png);
+    background-image: url(../images/freedom-patch-banner.png);
     background-size: cover;
     background-position: top center;
 }
@@ -116,7 +116,7 @@ body {
 }
 
 .light-purple-bg {
-    background-color: #F3EDEB;
+    background-color: #f3edeb99;
     border-radius: 10px;
 }
 
