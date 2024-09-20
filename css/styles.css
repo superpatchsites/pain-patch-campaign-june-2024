@@ -1,215 +1,482 @@
 body {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-/* header section */
-.name-initial {
-    width: 50px;
-    height: 50px;
-    background: #D60000;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 50px;
-    min-width: 50px;
+/*header section */
+.info-banner {
+  background-color: #313030;
+  color: #fff;
+  padding: 12px;
+  position: relative;
+  z-index: 2;
 }
 
-.blue-bg {
-    background-color: #008FBE;
-    padding: 16px;
+.navbar .superpatch-logo {
+  height: 50px;
 }
 
-/* banner section */
-.banner {
-    background-image: url('../images/freedom-patch.png');
-    background-position: center center;
-    height: 652px;
-    background-size: cover;
+.banner-text {
+  position: relative;
+  z-index: 2;
+  padding: 10rem 2rem;
 }
 
-.stars {
-    color: #F73734;
+/* add to cart section */
+.add-to-cart-section img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
 }
 
-.price {
-    color: #000;
-    font-size: 20px;
-    margin-left: 10px;
+.add-to-cart-section .freedom-banner {
+  filter: brightness(0.8);
+}
+
+.freedom-title {
+  color: #454545;
+}
+
+.freedom-info-container {
+  position: absolute;
+  z-index: 2;
+  padding: 0 1rem 2rem 2rem;
+}
+
+.freedom-info-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 0 16px 0 16px;
+}
+
+.freedom-info-text .preferred {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.review .count,
+.review .total-reviews-count {
+  margin-bottom: -2px;
+}
+
+.price-per-pack .price {
+  font-weight: 500;
 }
 
 .quantity-input {
-    border-radius: 50px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  border: 1px solid #a7a5a5;
 }
 
-.quantity-btn {
-    border: none;
+.quantity-btn,
+.quantity-btn:hover,
+.quantity-btn:active {
+  background-color: #d9d9d9 !important;
+  border-radius: 4px !important;
+  border: none;
 }
 
 .quantity {
-    text-align: center;
-    border: none;
-    margin: 0 5px;
-
+  text-align: center;
+  border: none;
+  margin: 0 5px;
 }
 
-.cart-button,
-.cart-button:hover {
-    color: #000;
-    padding: 6px 30px;
-    background-color: #FFA500;
+.quantity:focus {
+  box-shadow: none;
 }
 
-/* customers-review section */
-.verified {
-    color: #008FBE
+.benefits ul {
+  padding-left: 1rem;
 }
 
-.item {
-    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+/* marquee section */
+.marquee-section {
+  overflow: hidden;
 }
 
-/* technology section */
-.number {
-    font-size: 5rem;
+.benefits-scroll {
+  overflow: hidden;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
 }
 
-.light-blue-bg {
-    background-color: #DEF4FA;
-    border-top-right-radius: 120px;
-    border-bottom-right-radius: 120px;
+.benefits-tags {
+  display: flex;
 }
 
-.patch-quality {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    z-index: 1;
+.benefits-list {
+  display: flex;
+  flex-direction: row;
+  -webkit-animation: marquee 30s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 
-.benefit {
-    position: absolute;
-    z-index: 3;
-    right: 0;
+.benefits-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 30px;
 }
 
-.benefit-bg {
-    position: absolute;
-    width: 40vw;
-    max-width: 200px;
-    left: 0;
-    top: 0;
-    transform: translate(10%, 10%);
+.benefits-title {
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 2rem 0;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #828282;
+  font-size: 18px;
 }
 
-/* wear tech section */
-.wear-tech-section {
-    background-image: url(../images/freedom-patch-banner.png);
-    background-size: cover;
-    background-position: top center;
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-100%);
+  }
 }
 
-.how-it-works {
-    padding: 20px 10px 0 10px;
-    height: 100%;
+/* neuromatrix video section */
+.neuromatrix-video-section {
+  position: relative;
+  background: url(../images/freedom-patch-video.png) no-repeat top center;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
-.light-purple-bg {
-    background-color: #f3edeb99;
-    border-radius: 10px;
+.neuromatrix-video {
+  max-width: 50%;
+  float: left;
 }
 
-/* news section */
-.news-section {
-    background-image: url(../images/doctor-banner.png);
-    background-size: cover;
-    background-position: center center;
+.neuromatrix-video .neuro-text {
+  color: #ff746c;
 }
 
-/* jeffrey-gudin-section */
-.image-container {
-    position: relative;
-    width: fit-content;
-    margin: 20px auto;
+.neuromatrix-video-section .neuromatrix-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.neuromatrix-video-section .video-container {
+  aspect-ratio: 16 / 9;
+}
+
+.neuromatrix-video-section #neuromatrixVideo {
+  cursor: pointer;
+}
+
+/* customers review section */
+.customers-review-section h4 {
+  font-weight: 400;
+}
+
+.customers-review-section h5 {
+  font-weight: 400;
+}
+
+.customers-review-section .item {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.name-initial {
+  width: 50px;
+  height: 50px;
+  background: #d60000;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+}
+
+/* faq section */
+.faq-section .accordion-item {
+  border: none;
+  margin-bottom: 12px;
+  border-radius: 10px !important;
+}
+
+.accordion-item .accordion-header .accordion-button {
+  border-top-left-radius: var(--bs-accordion-inner-border-radius);
+  border-top-right-radius: var(--bs-accordion-inner-border-radius);
+  border-bottom-left-radius: var(--bs-accordion-inner-border-radius);
+  border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #ffffff;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+/* how to apply section */
+.step-image-container {
+  position: relative;
+  width: fit-content;
+}
+
+.step-image {
+  position: relative;
+  z-index: 2;
+  filter: saturate(0.75);
 }
 
 .background-box {
-    position: absolute;
-    top: 68%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #F73734;
-    width: 100%;
-    height: 72%;
-    z-index: 1;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 88%;
+  z-index: 1;
+  border-radius: 10px;
 }
 
-.profile-image {
-    position: relative;
-    z-index: 2;
+.number {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background: #eb4335;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* about section */
+.about-section .woman img {
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  object-position: left center;
+  height: 100%;
+}
+
+.about-section .man img {
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  object-position: right center;
+  height: 100%;
+}
+
+/* jeffrey gudin section */
+.show-more-btn,
+.show-less-btn {
+  cursor: pointer;
+}
+
+/* cart modal */
+.cart-modal {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #000;
+  z-index: 3;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border: 1px solid rgb(0 0 0 / 13%);
+  box-shadow: 0px 2px 10px 4px rgba(0, 0, 0, 0.125);
+  width: 100%;
+  max-width: 1322px;
+}
+
+.quantities .quantity-select {
+  cursor: pointer;
 }
 
 /* footer section */
-.footer-section {
-    background-color: #000;
-    padding: 38px;
+.footer-section .bi {
+  color: #828282;
 }
 
 .footer-section a {
-    font-size: small;
-    color: #fff;
+  color: #000;
+  text-decoration: none;
 }
 
-/* helpers */
-.red {
-    color: #D60000
+/* global */
+.stars {
+  color: #fbbc05;
 }
 
-.dark-gray {
-    color: #3D3D3D
+.light-gray-bg {
+  background-color: #f7f7f7;
 }
 
-.sub {
-    font-size: 18px;
+.btn-red {
+  background-color: #ef0c0c;
+  border-color: #ef0c0c;
+  color: #ffffff;
+  padding: 6px 18px;
+}
+
+.btn-red:hover,
+.btn-red:active {
+  background-color: #cc0000 !important;
+  border-color: #cc0000 !important;
+  color: #ffffff !important;
+}
+
+.owl-carousel .owl-stage {
+  display: flex;
+}
+
+.card-item {
+  height: 100%;
+}
+
+.sub-heading-color {
+  color: #343a40;
 }
 
 /* media queries */
-@media (max-width: 961px) {
-    .patch-quality {
-        left: unset;
-        transform: translate(-10%, 10%);
-    }
+@media (max-width: 767px) {
+  .neuromatrix-video-section {
+    aspect-ratio: 1/1;
+  }
 
-    .freedom-superpatch-sm {
-        transform: translate(10%, -12%);
-        position: relative; 
-        z-index: 2;
-    }
+  .neuromatrix-video {
+    max-width: 100%;
+  }
 
-    .light-blue-bg {
-        border-radius: 0;
-    }
+  .neuromatrix-video .neuro-text {
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.8);
+  }
 
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%; 
-        height: 50%; 
-        background-color: #DEF4FA;
-        z-index: 1; 
-    }
+  .pack {
+    font-size: 12px !important;
+  }
 
-    .couple-img {
-        position: relative; 
-        z-index: 2;
-    }
+  .discover-section h2 {
+    font-size: 20px;
+  }
 
-    .benefit {
-        position: relative;
-        top: 0;
-        right: 0;
-        transform: translate(-38%, -16%);
-    }
+  .freedom-info-container {
+    padding: 0 24px 6px 24px;
+  }
+
+  .add-to-cart-section .freedom-patch {
+    width: 40%;
+  }
+
+  .freedom-info-text {
+    margin-top: 1rem;
+    padding: 0;
+  }
+
+  .freedom-info-text h2 {
+    font-size: 34px;
+  }
+
+  .freedom-info-text .preferred {
+    font-size: 16px;
+  }
+
+  .freedom-info-text .benefits-text {
+    font-size: 13px;
+  }
+
+  .second-paragraph {
+    display: none;
+  }
+  #show-more-btn,
+  #show-less-btn {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 768px) {
+  .second-paragraph {
+    display: block;
+  }
+  #show-more-btn,
+  #show-less-btn {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .freedom-info-text h2 {
+    font-size: 50px;
+  }
+
+  .freedom-info-text .preferred {
+    font-size: 23px;
+    line-height: 30px;
+  }
+
+  .freedom-info-text .benefits-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-section img {
+    height: auto;
+  }
+
+  .about-section .man img {
+    object-position: top center;
+  }
+
+  .p-xs {
+    padding: 0 24px;
+  }
+
+  .neuromatrix-video-section .neuromatrix-video {
+    bottom: 2% !important;
+  }
+
+  .about-section img {
+    border-radius: 15px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .add-to-cart-section img {
+    object-fit: cover;
+  }
+
+  .pack {
+    font-size: 14px !important;
+  }
+
+  .freedom-info-text h2 {
+    font-size: 31px;
+  }
+
+  .freedom-info-text .preferred {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .freedom-info-text .benefits-text {
+    font-size: 10px;
+  }
 }
