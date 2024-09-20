@@ -438,7 +438,7 @@ body {
 
 @media (max-width: 992px) {
   .about-section img {
-    height: auto;
+    height: auto !important;
   }
 
   .about-section .man img {
