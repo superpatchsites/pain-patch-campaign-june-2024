@@ -234,7 +234,6 @@ body {
 .step-image {
   position: relative;
   z-index: 2;
-  filter: saturate(0.75);
 }
 
 .background-box {
@@ -254,9 +253,9 @@ body {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
-  background: #eb4335;
-  height: 50px;
-  width: 50px;
+  background: #000;
+  height: 45px;
+  width: 45px;
   z-index: 2;
   border-radius: 50%;
   font-weight: 800;
@@ -265,6 +264,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 3px #fff solid;
 }
 
 /* about section */
