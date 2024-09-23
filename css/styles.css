@@ -480,3 +480,10 @@ body {
     font-size: 10px;
   }
 }
+
+@media (min-width: 1400px) {
+  .jeffrey-gudin-section img {
+    height: 70%;
+  }
+}
+
