@@ -9,18 +9,18 @@ if (window.location.hash) {
 }
 
 // compare section - accordion mobile
-document.querySelectorAll(".toggle-chevron").forEach((chevron) => {
-  chevron.addEventListener("click", function () {
-    const benefitTexts =
-      this.closest("tr").nextElementSibling.querySelectorAll(".pros-cons");
+document.querySelectorAll(".toggle").forEach((cell) => {
+  cell.addEventListener("click", function () {
+    const chevron = this.querySelector(".toggle-chevron");
+    const benefitTexts = this.closest("tr").nextElementSibling.querySelectorAll(".pros-cons");
     const isExpanded = benefitTexts[0].style.display === "inline";
 
     benefitTexts.forEach((text) => {
       text.style.display = isExpanded ? "none" : "inline";
     });
 
-    this.classList.toggle("bi-chevron-down", isExpanded);
-    this.classList.toggle("bi-chevron-up", !isExpanded);
+    chevron.classList.toggle("bi-chevron-down", isExpanded);
+    chevron.classList.toggle("bi-chevron-up", !isExpanded);
   });
 });
 
