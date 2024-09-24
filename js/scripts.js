@@ -12,7 +12,8 @@ if (window.location.hash) {
 document.querySelectorAll(".toggle").forEach((cell) => {
   cell.addEventListener("click", function () {
     const chevron = this.querySelector(".toggle-chevron");
-    const benefitTexts = this.closest("tr").nextElementSibling.querySelectorAll(".pros-cons");
+    const benefitTexts =
+      this.closest("tr").nextElementSibling.querySelectorAll(".pros-cons");
     const isExpanded = benefitTexts[0].style.display === "inline";
 
     benefitTexts.forEach((text) => {
@@ -25,40 +26,28 @@ document.querySelectorAll(".toggle").forEach((cell) => {
 });
 
 // compare section
-const overviewTab = document.getElementById("pills-overview-tab");
-const detailedTab = document.getElementById("pills-detailed-tab");
-const overviewContent = document.querySelector(".overview-content");
-const detailedContent = document.querySelector(".detailed-content");
+document.addEventListener("DOMContentLoaded", function () {
+  const overviewBtn = document.getElementById("overview-btn");
+  const detailedBtn = document.getElementById("detailed-btn");
 
-detailedContent.style.display = "none";
-
-function updateTabs(activeTab) {
-  if (activeTab === "overview") {
-    overviewContent.style.display = "block";
-    detailedContent.style.display = "none";
-    detailedTab.classList.add("remove-left-border");
-    overviewTab.classList.remove("remove-right-border");
-  } else {
-    overviewContent.style.display = "none";
-    detailedContent.style.display = "block";
-    overviewTab.classList.add("remove-right-border");
-    detailedTab.classList.remove("remove-left-border");
-  }
-}
-
-if (overviewTab.classList.contains("active")) {
-  updateTabs("overview");
-} else {
-  updateTabs("detailed");
-}
-
-overviewTab.addEventListener("click", function () {
-  updateTabs("overview");
+  overviewBtn.classList.add("active");
+  detailedBtn.classList.remove("active");
 });
 
-detailedTab.addEventListener("click", function () {
-  updateTabs("detailed");
+document.getElementById("overview-btn").addEventListener("click", function () {
+  document.querySelector("table").classList.remove("detailed-active");
+
+  this.classList.add("active");
+  document.getElementById("detailed-btn").classList.remove("active");
 });
+
+document.getElementById("detailed-btn").addEventListener("click", function () {
+  document.querySelector("table").classList.add("detailed-active");
+
+  this.classList.add("active");
+  document.getElementById("overview-btn").classList.remove("active");
+});
+
 
 // zoom screen
 function applyZoom() {

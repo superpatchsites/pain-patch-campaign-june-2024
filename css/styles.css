@@ -179,50 +179,59 @@ body {
 }
 
 /* compare-section  */
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
+.large-screen .btn.active,
+.large-screen .btn:hover {
   color: #fff;
   background: #cd0b23;
   border: 1px #cd0b23 solid;
   border-radius: 30px;
   font-weight: 700;
+  cursor: pointer;
+  padding: 6px 24px;
 }
 
-.nav-pills .nav-link {
+.large-screen .btn-overview,
+.large-screen .btn-detailed {
   color: #cd0b23;
   background: #fff;
   border: 1px #cd0b23 solid;
   border-radius: 30px;
   font-weight: 700;
+  cursor: pointer;
+  padding: 6px 24px;
 }
 
-#pills-overview-tab.nav-link.active {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right: none;
+.large-screen .btn-overview {
+  margin-right: -3px;
 }
 
-#pills-detailed-tab.nav-link.active {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left: none;
+.large-screen .btn-detailed {
+  margin-left: -3px;
 }
 
-.remove-left-border {
+.large-screen .remove-left-border {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
   border-left: none !important;
 }
 
-.remove-right-border {
+.large-screen .remove-right-border {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
   border-right: none !important;
 }
 
+.large-screen td {
+  vertical-align: middle;
+}
+
+.large-screen .detailed-active .pros-cons {
+  display: inline;
+  position: absolute;
+  margin-top: 4px;
+}
+
 .compare-section table {
-  width: 100%;
-  table-layout: fixed;
   border-color: #b5b3b3;
 }
 
@@ -231,20 +240,21 @@ body {
   color: #fff;
 }
 
-.compare-section .large-screen td {
-  vertical-align: middle;
-}
-
 .compare-section .benefit-title {
   font-weight: 600;
 }
 
-.small-screen .pros-cons {
+.compare-section .pros-cons {
   display: none;
 }
 
 .small-screen .toggle-chevron {
   float: right;
+}
+
+.small-screen table {
+  width: 100%;
+  table-layout: fixed;
 }
 
 /* customers review section */
@@ -295,29 +305,29 @@ body {
 }
 
 /* how to apply section */
-.step-image-container {
+.how-to-apply-section .step-image-container {
   position: relative;
   width: fit-content;
 }
 
-.step-image {
+.how-to-apply-section .step-image {
   position: relative;
   z-index: 2;
 }
 
-.background-box {
+.how-to-apply-section .background-box {
   position: absolute;
-  top: 56%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #f7f7f7;
   width: 100%;
-  height: 88%;
+  height: 80%;
   z-index: 1;
   border-radius: 10px;
 }
 
-.number {
+.how-to-apply-section .number {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -352,6 +362,26 @@ body {
 }
 
 /* jeffrey gudin section */
+.jeffrey-gudin-section  .image-container {
+  position: relative;
+}
+
+.jeffrey-gudin-section  .background-box {
+  position: absolute;
+  top: 64%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F73734;
+  width: 100%;
+  height: 72%;
+  z-index: 1;
+}
+
+.jeffrey-gudin-section  .profile-image {
+  position: relative;
+  z-index: 2;
+}
+
 .show-more-btn,
 .show-less-btn {
   cursor: pointer;
@@ -372,7 +402,7 @@ body {
   border: 1px solid rgb(0 0 0 / 13%);
   box-shadow: 0px 2px 10px 4px rgba(0, 0, 0, 0.125);
   width: 100%;
-  max-width: 1322px;
+  max-width: 1300px;
 }
 
 .quantities .quantity-select {
@@ -551,7 +581,7 @@ body {
 }
 
 @media (min-width: 1400px) {
-  .jeffrey-gudin-section img {
-    height: 70%;
+  .compare-section {
+    padding-top: 6rem !important;
   }
 }
