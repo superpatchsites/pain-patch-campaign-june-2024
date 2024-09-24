@@ -146,11 +146,11 @@ body {
 /* neuromatrix video section */
 .neuromatrix-video-section {
   position: relative;
-  background: url(../images/freedom-patch-video.png) no-repeat top center;
+  background: url(../images/freedom-patch-video.png) no-repeat center center;
   background-size: cover;
   height: auto;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 24 / 9;
 }
 
 .neuromatrix-video {
@@ -171,7 +171,7 @@ body {
 }
 
 .neuromatrix-video-section .video-container {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 24/9;
 }
 
 .neuromatrix-video-section #neuromatrixVideo {
@@ -362,22 +362,22 @@ body {
 }
 
 /* jeffrey gudin section */
-.jeffrey-gudin-section  .image-container {
+.jeffrey-gudin-section .image-container {
   position: relative;
 }
 
-.jeffrey-gudin-section  .background-box {
+.jeffrey-gudin-section .background-box {
   position: absolute;
   top: 64%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #F73734;
+  background-color: #f73734;
   width: 100%;
   height: 72%;
   z-index: 1;
 }
 
-.jeffrey-gudin-section  .profile-image {
+.jeffrey-gudin-section .profile-image {
   position: relative;
   z-index: 2;
 }
@@ -532,6 +532,10 @@ body {
 
   .freedom-info-text .benefits-text {
     font-size: 16px;
+  }
+
+  .neuromatrix-video-section {
+    aspect-ratio: 16/9;
   }
 }
 
