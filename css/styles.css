@@ -178,6 +178,75 @@ body {
   cursor: pointer;
 }
 
+/* compare-section  */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background: #cd0b23;
+  border: 1px #cd0b23 solid;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.nav-pills .nav-link {
+  color: #cd0b23;
+  background: #fff;
+  border: 1px #cd0b23 solid;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+#pills-overview-tab.nav-link.active {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+
+#pills-detailed-tab.nav-link.active {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+}
+
+.remove-left-border {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-left: none !important;
+}
+
+.remove-right-border {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-right: none !important;
+}
+
+.compare-section table {
+  width: 100%;
+  table-layout: fixed;
+  border-color: #b5b3b3;
+}
+
+.compare-section th {
+  background-color: #cd0b23;
+  color: #fff;
+}
+
+.compare-section .large-screen td {
+  vertical-align: middle;
+}
+
+.compare-section .benefit-title {
+  font-weight: 600;
+}
+
+.small-screen .pros-cons {
+  display: none;
+}
+
+.small-screen .toggle-chevron {
+  float: right;
+}
+
 /* customers review section */
 .customers-review-section h4 {
   font-weight: 400;
@@ -486,4 +555,3 @@ body {
     height: 70%;
   }
 }
-

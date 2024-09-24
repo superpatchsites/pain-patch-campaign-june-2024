@@ -8,6 +8,59 @@ if (window.location.hash) {
   }
 }
 
+// compare section - accordion mobile
+document.querySelectorAll(".toggle-chevron").forEach((chevron) => {
+  chevron.addEventListener("click", function () {
+    const benefitTexts =
+      this.closest("tr").nextElementSibling.querySelectorAll(".pros-cons");
+    const isExpanded = benefitTexts[0].style.display === "inline";
+
+    benefitTexts.forEach((text) => {
+      text.style.display = isExpanded ? "none" : "inline";
+    });
+
+    this.classList.toggle("bi-chevron-down", isExpanded);
+    this.classList.toggle("bi-chevron-up", !isExpanded);
+  });
+});
+
+// compare section
+const overviewTab = document.getElementById("pills-overview-tab");
+const detailedTab = document.getElementById("pills-detailed-tab");
+const overviewContent = document.querySelector(".overview-content");
+const detailedContent = document.querySelector(".detailed-content");
+
+detailedContent.style.display = "none";
+
+function updateTabs(activeTab) {
+  if (activeTab === "overview") {
+    overviewContent.style.display = "block";
+    detailedContent.style.display = "none";
+    detailedTab.classList.add("remove-left-border");
+    overviewTab.classList.remove("remove-right-border");
+  } else {
+    overviewContent.style.display = "none";
+    detailedContent.style.display = "block";
+    overviewTab.classList.add("remove-right-border");
+    detailedTab.classList.remove("remove-left-border");
+  }
+}
+
+if (overviewTab.classList.contains("active")) {
+  updateTabs("overview");
+} else {
+  updateTabs("detailed");
+}
+
+overviewTab.addEventListener("click", function () {
+  updateTabs("overview");
+});
+
+detailedTab.addEventListener("click", function () {
+  updateTabs("detailed");
+});
+
+// zoom screen
 function applyZoom() {
   if (screen.width > 1920 && screen.height > 1440) {
     const zoomLevel = 1920 / 1440;
@@ -23,24 +76,24 @@ applyZoom();
 window.addEventListener("resize", applyZoom);
 
 // Show and Hide Button
-document.getElementById('show-more-btn').addEventListener('click', function() {
-  const secondParagraph = document.querySelector('.second-paragraph');
-  const showMoreBtn = document.getElementById('show-more-btn');
-  const showLessBtn = document.getElementById('show-less-btn');
+document.getElementById("show-more-btn").addEventListener("click", function () {
+  const secondParagraph = document.querySelector(".second-paragraph");
+  const showMoreBtn = document.getElementById("show-more-btn");
+  const showLessBtn = document.getElementById("show-less-btn");
 
-  secondParagraph.style.display = 'block';
-  showMoreBtn.style.display = 'none';
-  showLessBtn.style.display = 'block';
+  secondParagraph.style.display = "block";
+  showMoreBtn.style.display = "none";
+  showLessBtn.style.display = "block";
 });
 
-document.getElementById('show-less-btn').addEventListener('click', function() {
-  const secondParagraph = document.querySelector('.second-paragraph');
-  const showMoreBtn = document.getElementById('show-more-btn');
-  const showLessBtn = document.getElementById('show-less-btn');
+document.getElementById("show-less-btn").addEventListener("click", function () {
+  const secondParagraph = document.querySelector(".second-paragraph");
+  const showMoreBtn = document.getElementById("show-more-btn");
+  const showLessBtn = document.getElementById("show-less-btn");
 
-  secondParagraph.style.display = 'none';
-  showMoreBtn.style.display = 'inline';
-  showLessBtn.style.display = 'none';
+  secondParagraph.style.display = "none";
+  showMoreBtn.style.display = "inline";
+  showLessBtn.style.display = "none";
 });
 
 (async function ($) {
