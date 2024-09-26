@@ -180,7 +180,9 @@ body {
 
 /* compare-section  */
 .large-screen .btn.active,
-.large-screen .btn:hover {
+.large-screen .btn:hover,
+.large-screen .btn:first-child:active,
+.large-screen :not(.btn-check) + .btn:active {
   color: #fff;
   background: #cd0b23;
   border: 1px #cd0b23 solid;
@@ -431,6 +433,10 @@ body {
   background-color: #f7f7f7;
 }
 
+.add-to-cart-btn {
+  padding: 6px 0 !important;
+}
+
 .btn-red {
   background-color: #ef0c0c;
   border-color: #ef0c0c;
@@ -472,7 +478,7 @@ body {
   }
 
   .pack {
-    font-size: 11px !important;
+    font-size: 10px !important;
   }
 
   .discover-section h2 {
