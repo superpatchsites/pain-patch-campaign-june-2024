@@ -8,6 +8,51 @@ if (window.location.hash) {
   }
 }
 
+// sticky add to cart
+document.addEventListener("DOMContentLoaded", () => {
+  const stickyNavbar = document.querySelector(".sticky-add-to-cart");
+  const addToCartSections = document.querySelectorAll("#addToCart");
+
+  const toggleNavbarVisibility = (isAnyVisible) => {
+    if (isAnyVisible) {
+      stickyNavbar.classList.add('show');
+    } else {
+      stickyNavbar.classList.remove('show');
+    }
+  };
+
+  const checkInitialVisibility = () => {
+    if (addToCartSections.length > 0) {
+      const addToCartRect = addToCartSections[0].getBoundingClientRect();
+      const isVisible = addToCartRect.top < window.innerHeight && addToCartRect.bottom > 0;
+      toggleNavbarVisibility(!isVisible); 
+    }
+  };
+
+  setTimeout(() => {
+    checkInitialVisibility();
+  }, 100);
+
+  const observerOptions = {
+    root: null,
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        toggleNavbarVisibility(false);
+      } else {
+        toggleNavbarVisibility(true);
+      }
+    });
+  }, observerOptions);
+
+  addToCartSections.forEach((section) => {
+    observer.observe(section);
+  });
+});
+
 // compare section - accordion mobile
 document.querySelectorAll(".toggle").forEach((cell) => {
   cell.addEventListener("click", function () {
