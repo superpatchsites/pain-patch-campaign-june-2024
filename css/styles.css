@@ -482,6 +482,11 @@ body {
   color: #343a40;
 }
 
+#privacyPolicyModal, 
+#returnsPolicyModal {
+  z-index: 9999;
+}
+
 /* media queries */
 @media (max-width: 767px) {
   .neuromatrix-video-section {
