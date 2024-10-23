@@ -332,7 +332,7 @@ document.getElementById("show-less-btn").addEventListener("click", function () {
         "gid://shopify/ProductVariant/",
         ""
       );
-      const checkoutUrl = `https://store.superpatch.com/cart/${checkoutVariantId}:${quantityCount}?access_token=87f20013717bc33265c0ab86ead28dc0${utmString}${utmContentString}`;
+      const checkoutUrl = `https://checkout.mypainpatch.com/cart/${checkoutVariantId}:${quantityCount}?access_token=87f20013717bc33265c0ab86ead28dc0${utmString}${utmContentString}`;
 
       const checkoutLink = document.createElement("a");
       checkoutLink.href = checkoutUrl;
