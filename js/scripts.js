@@ -1,8 +1,8 @@
 // Remove version based on UTM
-(function (isV2) {
-  if (isV2) return document.getElementById("version-1").remove();
-  return document.getElementById("version-2").remove();
-})(window.is_v2);
+// (function (isV2) {
+//   if (isV2) return document.getElementById("version-1").remove();
+//   return document.getElementById("version-2").remove();
+// })(window.is_v2);
 
 // Opens up modal on hash
 if (window.location.hash) {
@@ -87,23 +87,16 @@ if (window.location.hash) {
 
   // sleep deeply video
   document
-      .getElementById("sleepDeeplyVideo")
+      .getElementById("neuromatrixVideo")
       .addEventListener("click", function () {
-          var container = document.querySelector(".sleep-deeply-video");
+          var container = document.querySelector(".neuromatrix-video");
           var videoHtml = `
-    <div class="col-md-8 offset-md-2 mb-4">
-      <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/4hE5jBEqA1c?autoplay=1&rel=0" title="How It Works" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-    </div>
-  `;
+			<div class="video-container">
+				<iframe src="https://www.youtube.com/embed/xIauFGK2-NM?autoplay=1&rel=0" title="Freedom Patch - How it Works" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		`;
 
-          container.innerHTML = videoHtml;
-
-          var videoSection = document.querySelector(
-              ".sleep-deeply-video-section"
-          );
-          videoSection.style.padding = "0";
+      container.innerHTML = videoHtml;
       });
 
   // jay glazer video
